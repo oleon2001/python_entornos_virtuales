@@ -18,7 +18,7 @@ def run():
   charts.generate_pie_chart(countries, percentages)
 
   data = read_csv.read_csv('data.csv')
-  country = input('adrian te odio => ')
+  country = input('tipea el pais=> ')
   print(country)
 
   result = utils.population_by_country(data, country)
