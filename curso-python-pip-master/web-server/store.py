@@ -6,5 +6,5 @@ def get_categories():
     print(r.text)
     print(type(r.text))
     categories = r.json()
-    for category in categories:
-        print(category['name'])
+    for x in categories:
+        print(x['name'])
