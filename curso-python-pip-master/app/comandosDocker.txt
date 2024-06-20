@@ -1,0 +1,25 @@
+
+
+    docker-compose build: 
+    Este comando se utiliza para construir las imágenes de los servicios especificados 
+    en el archivo "docker-compose.yml". Esto significa que tomará las especificaciones de construcción de cada servicio, como el Dockerfile y los contextos, y creará una imagen nueva y actualizada.
+
+    docker-compose ps:
+     Este comando se utiliza para ver el estado de los servicios especificados 
+     en el archivo "docker-compose.yml". Muestra si los servicios están corriendo o detenidos, y también muestra el nombre del contenedor, el puerto y la imagen utilizada.
+
+    docker-compose down: 
+    Este comando se utiliza para detener y eliminar los contenedores, 
+    redes y volúmenes creados por "docker-compose up".
+
+    docker-compose up -d: 
+    Este comando se utiliza para iniciar los servicios 
+    especificados en el archivo "docker-compose.yml" en segundo plano. El parámetro "-d" indica que se ejecutará en segundo plano.
+
+    docker-compose ps: 
+    Es el mismo comando que el segundo, pero se repite 
+    para mostrar el estado de los servicios después de haber sido iniciados.
+
+    docker-compose exec app-csv bash:
+     Este comando se utiliza para ejecutar una terminal 
+     dentro del contenedor especificado, en este caso "app-csv", y conectarse a él mediante una sesión interactiva de bash. Esto permite realizar tareas dentro del contenedor, como verificar los archivos o ejecutar comandos.
