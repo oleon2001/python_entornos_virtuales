@@ -5,3 +5,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/app
+
+
+# Persistir datos en el volumen, mapear el directorio actual al directorio /app en el contenedor
+#Archivo Dockerfile que se utiliza para la construcción de la imagen
+# Contexto de la construcción, es el directorio actual

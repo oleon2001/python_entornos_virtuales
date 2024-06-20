@@ -1,0 +1,23 @@
+Automatizando la vinculacion de archivos en Docker
+
+Cuando realizamos un cambio en el codigo del programa, este no se refleja en el codigo almacenado en el contenedor por lo que para verlo reflejado debemos salir del contenedor y lanzarlo nuevamente lo cual daña la experiencia de desarrollo.
+
+Para resolver este problema y ver los cambios reflejados de manera automatica en el contenedor, salimos del mismo y se agrega la siguiente linea en el archivo docker-compose.yml
+
+ services:
+  app-csv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+
+Una vez agregado, lanzamos el docker nuevamente con el comando:
+
+docker-compose up -d
+
+Nos conectamos con el contenedor
+
+docker-compose exec app-csv bash
+
+Y veremos los cambios que se hagan en el codigo en automatico
