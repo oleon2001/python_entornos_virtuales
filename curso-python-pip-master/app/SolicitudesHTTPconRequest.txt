@@ -1,0 +1,47 @@
+
+    Crear un entorno
+
+python3 -m venv env
+
+    Activar un entorno virtual
+
+source env/bin/activate
+
+    Verificar que estemos dentro del entorno virtual
+
+which python3
+
+    Instalar la dependencia dentro del entorno virtual
+
+pip3 install requests
+
+    Verificar la instalacion
+
+pip3 freeze
+
+    Crear el archivo para que cualquier persona pueda desplegar el proyecto
+
+pip freeze > requeriments.txt
+
+STORE
+
+import requests
+
+def get_categories():
+    r = requests.get('https://api.escuelajs.co/api/v1/categories')
+    print(r.status_code)
+    print(r.text)
+    print(type(r.text))
+    categories = r.json()
+    for category in categories:
+        print(category['name'])
+
+MAIN
+
+import store
+
+def run():
+    store.get_categories()
+
+if __name__ == '__main__':
+    run()

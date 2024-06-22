@@ -7,3 +7,8 @@ services:
       - .:/app
     ports:
      - '80:80'
+
+
+
+
+#en caso de trabajar con linux colocar en el puerto 8080
